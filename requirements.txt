@@ -1,7 +1,4 @@
-pandas 
-openpyxl 
-xlrd 
-lxml 
-pyarrow 
-fastparquet
+pandas
 xmltodict
+openpyxl
+xlrd
