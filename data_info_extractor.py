@@ -1,5 +1,6 @@
 import pandas as pd
 import pandas.api.types as ptypes
+import xmltodict
 import random
 import sys
 import os
@@ -97,11 +98,12 @@ def process_semi_structured(data, parent_key=''):
         lines.append(f"{parent_key};{data_type};{example}")
     return lines
 
-def process_semi_structured_file(file_path):
-    """Process a semi-structured JSON file and collect field info."""
+def process_semi_structured_file(data):
+    """Process semi-structured JSON or XML data and collect field info."""
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
+        if isinstance(data, str):  # If a string, assume it's a file path (JSON case)
+            with open(data, 'r', encoding='utf-8') as f:
+                data = json.load(f)
     except Exception as e:
         print(f"❌ Error reading JSON file: {e}")
         sys.exit(1)
@@ -124,7 +126,7 @@ def process_semi_structured_file(file_path):
     return field_info
 
 def read_file(file_path):
-    """Read the file based on its extension and return a DataFrame or a JSON path."""
+    """Read the file based on its extension and return content."""
     _, file_extension = os.path.splitext(file_path)
     file_extension = file_extension.lower()
     
@@ -138,8 +140,11 @@ def read_file(file_path):
         elif file_extension == '.json':
             return 'semi_structured', file_path
         elif file_extension == '.xml':
-            df = pd.read_xml(file_path)
-            return 'tabular', df
+            with open(file_path, 'r', encoding='utf-8') as f:
+                xml_data = f.read()
+                # Convert XML to dictionary
+                data = xmltodict.parse(xml_data)
+                return 'semi_structured', data
         elif file_extension == '.parquet':
             df = pd.read_parquet(file_path)
             return 'tabular', df

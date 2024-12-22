@@ -1,0 +1,42 @@
+<person>
+    <firstName>John</firstName>
+    <lastName>Doe</lastName>
+    <age>30</age>
+    <city>New York</city>
+    <jobTitle>Software Engineer</jobTitle>
+    <contact>
+        <email>john.doe@example.com</email>
+        <phone>+1-555-123-4567</phone>
+    </contact>
+    <hobbies>
+        <hobby>Cycling</hobby>
+        <hobby>Photography</hobby>
+        <hobby>Reading</hobby>
+    </hobbies>
+    <skills>
+        <skill>
+            <name>Python</name>
+            <level>Expert</level>
+        </skill>
+        <skill>
+            <name>JavaScript</name>
+            <level>Intermediate</level>
+        </skill>
+        <skill>
+            <name>SQL</name>
+            <level>Advanced</level>
+        </skill>
+    </skills>
+    <preferences>
+        <favoriteFoods>
+            <food>Pizza</food>
+            <food>Sushi</food>
+            <food>Tacos</food>
+        </favoriteFoods>
+        <favoriteMovies>
+            <movie>Inception</movie>
+            <movie>The Matrix</movie>
+            <movie>Interstellar</movie>
+        </favoriteMovies>
+    </preferences>
+</person>

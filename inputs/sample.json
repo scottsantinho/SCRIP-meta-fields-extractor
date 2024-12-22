@@ -1,0 +1,34 @@
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "age": 30,
+  "city": "New York",
+  "jobTitle": "Software Engineer",
+  "contact": {
+    "email": "john.doe@example.com",
+    "phone": "+1-555-123-4567"
+  },
+  "hobbies": [
+    "Cycling",
+    "Photography",
+    "Reading"
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "level": "Expert"
+    },
+    {
+      "name": "JavaScript",
+      "level": "Intermediate"
+    },
+    {
+      "name": "SQL",
+      "level": "Advanced"
+    }
+  ],
+  "preferences": {
+    "favoriteFoods": ["Pizza", "Sushi", "Tacos"],
+    "favoriteMovies": ["Inception", "The Matrix", "Interstellar"]
+  }
+}

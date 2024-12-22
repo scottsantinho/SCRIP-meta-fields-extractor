@@ -4,3 +4,4 @@ xlrd
 lxml 
 pyarrow 
 fastparquet
+xmltodict
