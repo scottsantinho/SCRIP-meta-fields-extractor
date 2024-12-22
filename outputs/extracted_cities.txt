@@ -1,0 +1,10 @@
+LatD;Integer;38
+ "LatM";Integer;16
+ "LatS";Integer;0
+ "NS";String; "N"
+ "LonD";Integer;73
+ "LonM";Integer;39
+ "LonS";Integer;24
+ "EW";String; "W"
+ "City";String; "Waterbury"
+ "State";String; IL
