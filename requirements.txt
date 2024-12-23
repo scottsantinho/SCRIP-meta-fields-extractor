@@ -2,3 +2,4 @@ pandas
 xmltodict
 openpyxl
 xlrd
+qvd
