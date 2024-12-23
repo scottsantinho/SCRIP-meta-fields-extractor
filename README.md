@@ -28,6 +28,7 @@ The **Script Meta-Fields Extractor** is a Python-based tool designed to extract 
 - JSON
 - XML
 - Parquet
+- QVD (with the version 1.1)
 
 The tool processes data files located in the `inputs` directory and generates metadata reports saved in the `outputs` directory.
 
